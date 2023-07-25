@@ -28,13 +28,26 @@
       <li class="list-group-item">Item 3</li>
       <li class="list-group-item">Item 4</li>
     </ul>
+    <h3>Hello!</h3>
    </div>
   </div>
   <script>
-    let l = document.querySelector("li:nth-child(2)");
-    l.style.backgroundColor = "green";
-    let l3 = document.querySelector("li:nth-child(3)");
-    l3.style.display = "none";
+    let list = document.getElementById('items');
+    list.parentElement.style.backgroundColor = 'gray';
+    list.children[1].style.fontWeight = 'bold';
+    list.firstElementChild.style.backgroundColor = 'green';
+    list.lastElementChild.style.backgroundColor = 'blue';
+    list.nextElementSibling.style.color = 'red';
+    list.previousElementSibling.style.color = 'blue';
+    let h4 = document.createElement('h4');
+    let textNode = document.createTextNode("I am the element created by javascript");
+    h4.append(textNode);
+    h4.setAttribute('style', 'color : pink');
+    console.log(h4);
+    let container = document.querySelector('.container');
+    console.log(container);
+    container.append(h4);
+
   </script>
 </body>
 </html>
